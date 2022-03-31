@@ -1,0 +1,21 @@
+
+/* Hide no spice checkbox */
+#no-spice {
+    display: none;
+}
+
+#landing-page {
+    display: block;
+}
+
+#order-form {
+    display: none;
+}
+
+#order-details {
+    display: none;
+}
+
+#order-confirmation {
+    display: none;
+}

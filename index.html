@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tay Street Burger</title>
+    <link rel="stylesheet" href="/Styling/style.css">
+    <script src="/main.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="title">
+        <h1>Tay Street Burger</h1>
+    </div>
+
+    <div class="landing-page" id="landing-page">
+        <button type="button" onclick="orderNow()">Order Now</button>
+    </div>
+
+    <!-- Order Form -->
+
+    <div class="order-form" id="order-form">
+        <h2>Create Your Burger</h2>
+        <div class="bun">
+            <h3>Bun</h3>
+            <label for="brioche">Brioche</label>
+            <input type="radio" name="bun" value="Brioche bun" id="brioche">
+            <label for="sesame">Sesame</label>
+            <input type="radio" name="bun" value="Sesame bun" id="sesame">
+            <label for="gluten-free">Gluten-free</label>
+            <input type="radio" name="bun" value="Gluten-free bun" id="gluten-free">
+        </div>
+        <div class="patty"></div>
+            <h3>Patty</h3>
+            <label for="angus-beef">Angus Beef</label>
+            <input type="radio" name="patty" value="Angus Beef" id="angus-beef">            
+            <label for="impossible-meat">Impossible Meat</label>
+            <input type="radio" name="patty" value="Impossible Beef" id="impossible-meat">
+            <label for="vegeterian">Vegeterian</label>
+            <input type="radio" name="patty" value="Vegeterian" id="vegeterian">
+            <label for="crunchy-chicken">Crunchy Chicken</label>
+            <input type="radio" name="patty" value="Crunchy Chicken" id="crunchy-chicken">
+        <div class="salads"></div>
+            <h3>Salads</h3>
+            <label for="lettuce">Lettuce</label>
+            <input type="checkbox" name="salad" value="Lettuce" id="lettuce">
+            <label for="tomato">Tomato</label>
+            <input type="checkbox" name="salad" value="Tomato" id="tomato">
+            <label for="pickles">Pickles</label>
+            <input type="checkbox" name="salad" value="Pickles" id="pickles">
+            <label for="onion">Onion</label>
+            <input type="checkbox" name="salad" value="Onion" id="onion">
+        <div class="sauces"></div>
+            <h3>Sauces</h3>
+            <label for="mustard">Mustard</label>
+            <input type="checkbox" name="sauce" value="Mustard" id="mustard">
+            <label for="mayo">Mayo</label>
+            <input type="checkbox" name="sauce" value="Mayo" id="mayo">
+            <label for="bbq">Barbeque</label>
+            <input type="checkbox" name="sauce" value="Barbeque" id="bbq">
+            <label for="tomato">Tomato</label>
+            <input type="checkbox" name="sauce" value="Tomato" id="tomato">
+        <div class="spice">
+            <input type="radio" name="spice" value="" id="no-spice" checked>
+            <label for="mild"></label>
+            <input type="radio" name="spice" value="Mild Chilli" id="mild">
+            <label for="medium"></label>
+            <input type="radio" name="spice" value="Medium Chilli" id="medium">
+            <label for="hot"></label>
+            <input type="radio" name="spice" value="Hot Chilli" id="hot">
+        </div>
+        <button type="button" onclick="next()">Next</button>
+    </div>
+
+    <!-- Order Details -->
+    <div class="order-details" id="order-details">
+        <h2>Order Details</h2>
+        <label for="name">Name:</label> 
+        <input type="text" placeholder="enter your name" id="get-user-name" required/>
+        <p id="name-alert"></p>
+        <h3>Burger</h3>
+        <p id="patty"></p>
+        <p id="bun"></p>
+        <p id="salads"></p>
+        <p id="sauces"></p>
+        <p id="spice"></p>
+        <textarea name="comments" id="" cols="30" rows="3" placeholder="Special requests & dietry requirements"></textarea>
+        <p id="total"></p>
+        <button type="button" onclick="confirmOrder()">Confirm Order</button>
+        <button type="button" onclick="backToCreate()">Back</button>
+     </div>
+
+
+
+    <!-- Order Confirmation -->
+
+    <div class="order-confirmation" id="order-confirmation">
+        <p>Thanks <span id="user-name-output"></span>, your order has been placed</p>
+        <p>Order number: <span id="order-number"></span></p>
+        <button type="button" onclick="history.go(0)">New Order</button>
+    </div>
+
+</body>
+</html>
