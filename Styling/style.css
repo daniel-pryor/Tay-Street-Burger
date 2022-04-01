@@ -98,6 +98,10 @@ body {
     padding: 20px 0;
 }
 
+.order-title:hover {
+    cursor: pointer;
+}
+
 
 .order-form {
     display: grid;
@@ -127,10 +131,6 @@ body {
     padding: 0px 0px 5px 8px;
     margin-top: 10px;
     line-height: 10px;
-}
-
-.order-form br {
-    height: 10px;
 }
 
 .spice {
