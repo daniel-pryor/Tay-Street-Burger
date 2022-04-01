@@ -1,5 +1,6 @@
 body {
     font-family: roboto;
+    background: #202624;
 }
 
 /* Hide no spice checkbox */
@@ -81,7 +82,7 @@ body {
     cursor: pointer;
 }
 
-/* Ordering page */
+/* Ordering page background coulouring */
 
 .ordering-page {
     background: #202624;
@@ -89,7 +90,7 @@ body {
 }
 
 
-/* Order Page */
+/* Create Burger Page */
 
 .order-title {
     color: white;
@@ -97,13 +98,15 @@ body {
     padding: 20px 0;
 }
 
+
 .order-form {
     display: grid;
-    grid-template-rows: 50px 100px 120px 120px 120px 100px 50px;
+    grid-template-rows: 50px 100px 120px 120px 120px 100px 60px;
     background: #fff;
-    height: 80vh;
+    height: fit-content;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 15px;
     border-radius: 40px;    
     text-align: center;
 }
@@ -147,15 +150,22 @@ body {
    color: #fff;
    background: #202624;
    border-radius: 30px;
+   transition: width 1.5s;
+}
+
+.next:hover {
+    
+    width: 300px;
+    cursor: pointer;
 }
 
 /* Order Details */
 
 .order-details {
     display: grid;
-    grid-template-rows: 10px 70px 20px 40px 200px 45px 100px 50px 40px;
+    grid-template-rows: 10px 70px 20px 40px 200px 45px 100px 50px 60px;
     background: #fff;
-    height: 70vh;
+    height: fit-content;
     width: 90%;
     margin: 0 auto;
     border-radius: 40px;    
@@ -230,6 +240,12 @@ body {
     color: #fff;
     background: #202624;
     border-radius: 30px;
+    transition: width 1.5s;
+}
+
+.confirm-order:hover {
+    width: 300px;
+    cursor: pointer;
 }
 
 .back-button {
@@ -240,6 +256,12 @@ body {
     color: #fff;
     background: #202624a4;
     border-radius: 30px;
+    transition: width 1.5s;
+}
+
+.back-button:hover {
+    width: 300px;
+    cursor: pointer;
 }
 
 /* Order Confirmation  */
@@ -248,11 +270,12 @@ body {
     display: grid;
     grid-template-rows: 100px 100px 100px;
     background: #fff;
-    height: 32vh;
+    height: fit-content;
     width: 90%;
     margin: 0 auto;
     border-radius: 40px;    
     text-align: center;
+    align-items: center;
 }
 
 .order-confirmation p {
@@ -272,6 +295,23 @@ body {
     color: #fff;
     background: #202624;
     border-radius: 30px;
+    transition: width 1.5s;
+}
+
+.new-order-button:hover {
+    width: 300px;
+    cursor: pointer;
 }
 
 
+@media only screen and (min-width: 500px) {
+    .landing-page {
+        background: url(/Styling/BestburgerOriginal.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .order-confirmation, .order-details, .order-form{
+        width: 50%;
+    }
+}
