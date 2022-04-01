@@ -179,6 +179,6 @@ function total () {
     }
 
     burgerCost = bunCost + pattyCost + spiceCost;
-    document.querySelector('p[id="total"]').innerHTML = "The total is: $" + burgerCost;
+    document.querySelector('p[id="total"]').innerHTML = "The total is: $" + burgerCost.toFixed(2);
 
 }
