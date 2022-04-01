@@ -1,14 +1,25 @@
+body {
+    font-family: roboto;
+}
 
 /* Hide no spice checkbox */
 #no-spice {
     display: none;
 }
 
+/* Control display */
+
 #landing-page {
-    display: block;
+    display: grid;
+    
 }
 
-#order-form {
+#ordering-page {
+    display: none;
+    
+}
+
+#order-form-page {
     display: none;
 }
 
@@ -19,3 +30,248 @@
 #order-confirmation {
     display: none;
 }
+
+/* Landing Page */
+
+.landing-page {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    background: url(/Styling/BestburgerIphone.jpg);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.title {
+    color: white;    
+    grid-row: 4;
+}
+
+#taystreet-title {
+    font-size: 35px;
+    letter-spacing: 6px;
+    font-weight: 500;
+
+}
+
+#burger-title {
+    font-size: 66px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.order-now {
+    color: white;
+    background: 0;
+    border: none;
+    font-size: 25px;
+    font-family: roboto;
+    letter-spacing: 4.5%;
+    grid-row: 11;
+    align-self: end;
+    transition: font-size 2s;
+    width: 40%;
+    justify-self: center;
+}
+
+.order-now:hover {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Ordering page */
+
+.ordering-page {
+    background: #202624;
+    height: 100vh;
+}
+
+
+/* Order Page */
+
+.order-title {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.order-form {
+    display: grid;
+    grid-template-rows: 50px 100px 120px 120px 120px 100px 50px;
+    background: #fff;
+    height: 80vh;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 40px;    
+    text-align: center;
+}
+
+.order-form h2, .order-form h3 {
+    font-size: 23px;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.order-form h3 {
+    color: #91000B;
+}
+
+.order-form label {
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0px 0px 5px 8px;
+    margin-top: 10px;
+    line-height: 10px;
+}
+
+.order-form br {
+    height: 10px;
+}
+
+.spice {
+    margin-top: 30px;
+}
+
+.spice img {
+    height: 30px;
+}
+
+.next {
+    
+    justify-self: center;
+   height: 35px; 
+   width: 226px;
+   font-size: 20px;
+   color: #fff;
+   background: #202624;
+   border-radius: 30px;
+}
+
+/* Order Details */
+
+.order-details {
+    display: grid;
+    grid-template-rows: 10px 70px 20px 40px 200px 45px 100px 50px 40px;
+    background: #fff;
+    height: 70vh;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 40px;    
+    text-align: left;
+}
+
+.order-details h2 {
+    text-align: center;
+}
+
+.name-input {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.name-input label {
+    font-size: 23px;
+}
+
+.name-input input {
+    margin-left: 10px;
+    padding-left: 5px;
+    color: #A4A4A4;
+    font-size: 18px;
+    width: 154px;
+    height: 32px;
+    background: #EDEDED;
+}
+
+#name-alert {
+    color: #91000B;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.order-details h3 {
+    color: #91000B;
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+#patty {
+    font-weight: 400;
+    margin-top: 15px;
+    margin-left: -40px;
+}
+
+.ingredients {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    margin-left: 80px;
+}
+
+#total {
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.order-details textarea {
+    width: 80%;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.confirm-order {
+    justify-self: center;
+    height: 35px; 
+    width: 226px;
+    font-size: 20px;
+    color: #fff;
+    background: #202624;
+    border-radius: 30px;
+}
+
+.back-button {
+    justify-self: center;
+    height: 35px; 
+    width: 226px;
+    font-size: 20px;
+    color: #fff;
+    background: #202624a4;
+    border-radius: 30px;
+}
+
+/* Order Confirmation  */
+
+.order-confirmation {
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    background: #fff;
+    height: 32vh;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 40px;    
+    text-align: center;
+}
+
+.order-confirmation p {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+
+
+.new-order-button {
+    justify-self: center;
+    height: 35px; 
+    width: 226px;
+    font-size: 20px;
+    color: #fff;
+    background: #202624;
+    border-radius: 30px;
+}
+
+
