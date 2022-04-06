@@ -9,13 +9,14 @@ function orderNow() {
         } else {
         landingPage.style.display = "none";
         }
-
+    // Display ordering page
     const orderPage = document.querySelector('div[id="ordering-page"]');
     if (orderPage.style.display === "grid") {
         orderPage.style.display = "none";
     } else {
         orderPage.style.display = "grid";
     }
+    // Display order form
     const orderForm = document.querySelector('div[id="order-form-page"]');
     if (orderForm.style.display === "grid") {
         orderForm.style.display = "none";
@@ -24,6 +25,8 @@ function orderNow() {
     }
 }
 
+// This function take the selected ingredients and displays them
+// then Hides the Order form and display order details
 
 function next () {
     // Get Bun
@@ -75,68 +78,7 @@ function next () {
       }
 }
 
-
-// This function takes the order name and returns the order confirmation
-
-function confirmOrder () {
-    // Get Name
-    let userName = document.querySelector('input[id="get-user-name"]').value;
-
-    // Get Random Order Number
-    let orderNum = Math.floor(Math.random() * 100);
-    
-    // Return Name and Order Number
-    document.querySelector('span[id="user-name-output"]').innerHTML = userName;
-    document.querySelector('span[id="order-number"]').innerHTML = orderNum;
-    
-    // Name required for confirmation 
-    
-    if(userName !== "") {
-
-        // Hide Order Details
-        orderDetails = document.querySelector('div[id="order-details"]');
-        if (orderDetails.style.display === "none" && userName !== "") {
-            orderDetails.style.display = "grid";
-        } else {
-            orderDetails.style.display = "none";
-        }
-
-        // Display Order Confirmation
-        orderForm = document.querySelector('div[id="order-confirmation"]');
-        if (orderForm.style.display === "grid") {
-            orderForm.style.display = "none";
-        } else {
-            orderForm.style.display = "grid";
-        }
-    } else {
-        document.querySelector('p[id="name-alert"]').innerHTML = "Please enter a name for your order"
-    }
-
-  
-
-    
-}
-
-// This function returns back to the Create Burger form
-
-function backToCreate () {
-
-    // Hide Order Details
-    orderDetails = document.querySelector('div[id="order-details"]');
-    if (orderDetails.style.display === "none") {
-        orderDetails.style.display = "grid";
-      } else {
-        orderDetails.style.display = "none";
-      }
-    // Displays Order Form
-    orderForm = document.querySelector('div[id="order-form-page"]');
-    if (orderForm.style.display === "grid") {
-        orderForm.style.display = "none";
-    } else {
-        orderForm.style.display = "grid";
-    }
-}
-
+// This function take the selected ingredients and calculates the cost of the burger
 
 function total () {
     // Get Bun
@@ -182,3 +124,69 @@ function total () {
     document.querySelector('p[id="total"]').innerHTML = "The total is: $" + burgerCost.toFixed(2);
 
 }
+
+// This function returns back to the Create Burger form
+
+function backToCreate () {
+
+    // Hide Order Details
+    orderDetails = document.querySelector('div[id="order-details"]');
+    if (orderDetails.style.display === "none") {
+        orderDetails.style.display = "grid";
+      } else {
+        orderDetails.style.display = "none";
+      }
+    // Displays Order Form
+    orderForm = document.querySelector('div[id="order-form-page"]');
+    if (orderForm.style.display === "grid") {
+        orderForm.style.display = "none";
+    } else {
+        orderForm.style.display = "grid";
+    }
+}
+
+
+// This function takes the order name and returns the order confirmation with a random order number
+
+function confirmOrder () {
+    // Get Name
+    let userName = document.querySelector('input[id="get-user-name"]').value;
+
+    // Get Random Order Number
+    let orderNum = Math.floor(Math.random() * 100);
+    
+    // Return Name and Order Number
+    document.querySelector('span[id="user-name-output"]').innerHTML = userName;
+    document.querySelector('span[id="order-number"]').innerHTML = orderNum;
+    
+    // Name required for confirmation 
+    
+    if(userName !== "") {
+
+        // Hide Order Details
+        orderDetails = document.querySelector('div[id="order-details"]');
+        if (orderDetails.style.display === "none" && userName !== "") {
+            orderDetails.style.display = "grid";
+        } else {
+            orderDetails.style.display = "none";
+        }
+
+        // Display Order Confirmation
+        orderForm = document.querySelector('div[id="order-confirmation"]');
+        if (orderForm.style.display === "grid") {
+            orderForm.style.display = "none";
+        } else {
+            orderForm.style.display = "grid";
+        }
+    } else {
+        document.querySelector('p[id="name-alert"]').innerHTML = "Please enter a name for your order"
+    }
+
+  
+
+    
+}
+
+
+
+
