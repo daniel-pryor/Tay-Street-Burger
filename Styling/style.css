@@ -44,7 +44,6 @@ body {
     text-align: center;
 }
 
-
 .title {
     color: white;    
     grid-row: 4;
@@ -82,15 +81,12 @@ body {
     cursor: pointer;
 }
 
-/* Ordering page background coulouring */
+/* Ordering page background coulouring and title */
 
 .ordering-page {
     background: #202624;
     height: 100vh;
 }
-
-
-/* Create Burger Page */
 
 .order-title {
     color: white;
@@ -101,6 +97,9 @@ body {
 .order-title:hover {
     cursor: pointer;
 }
+
+
+/* Create Burger Page */
 
 
 .order-form {
@@ -303,6 +302,7 @@ body {
     cursor: pointer;
 }
 
+/* Responsive for wider screens */
 
 @media only screen and (min-width: 500px) {
     .landing-page {
